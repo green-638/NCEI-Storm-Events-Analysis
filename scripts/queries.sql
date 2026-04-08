@@ -11,11 +11,15 @@ GROUP BY
 	CAST(YEAR(begin_date) AS CHAR(4));
 
 
--- query 2: total damage
+-- query 2: total damage and total events
 CREATE VIEW total_damage_view AS
 SELECT SUM(damage_property + damage_crops) AS total_cost
 FROM events
 JOIN event_details USING(details_id)  
+
+CREATE VIEW total_events AS
+SELECT COUNT(*) AS total_event_count
+FROM events
 	
 	
 -- query 3: average weather event count per month
