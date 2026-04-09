@@ -98,3 +98,5 @@ HAVING
 	COUNT(event_type) > 10
 ORDER BY
 	ROUND(AVG(damage_per_minute), 2) DESC;
+
+
