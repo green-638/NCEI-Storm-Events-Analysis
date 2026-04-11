@@ -99,6 +99,18 @@ SELECT DISTINCT state_fips, state, cz_fips, cz_name, cz_type,
 	begin_location, cz_timezone, wfo
 FROM storm_events;
 
+-- get valid counties
+CREATE VIEW valid_counties AS (
+	WITH all_counties AS (
+		SELECT DISTINCT loc_id, state, REPLACE(REPLACE(county_name, ' COUNTY', ''), ' PARISH', '') AS county
+		FROM locations
+	)
+		
+	SELECT loc_id, state, county
+	FROM all_counties
+	INNER JOIN state_counties USING(state, county)
+)
+	
 
 -- event_details table
 CREATE TABLE event_details (
