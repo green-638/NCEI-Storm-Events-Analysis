@@ -2,7 +2,7 @@
 This project creates a MySQL database from the National Centers for Environmental Information’s [Storm Events database](https://www.ncei.noaa.gov/stormevents/) and analyzes the data through a Power BI dashboard.
 
 ## Purpose
-The purpose of this dashboard is to inform stakeholders in natural disaster and hazard recovery on what weather events have occurred, where they have occurred, and how much damage they have caused. 
+The purpose of this dashboard is to inform stakeholders in natural disaster and hazard response and recovery on what weather events have occurred, where they have occurred, and how much damage they have caused. This information can be used to identify locations that require assistance, such as grants, to recover from and minimize the effects of damaging events.
 
 ## Tasks
 - Import Storm Events datasets into single MySQL DB table
